@@ -111,7 +111,9 @@
     "unableChangeAssignee": "Řešitele nelze změnit",
     "availableToCompleteStarting": "Lze dokončit od {{date}}",
     "delegateToSomeoneElse": "Předat někomu jinému",
-    "selectAPerformer": "Vyberte, kdo úkol provede"
+    "selectAPerformer": "Vyberte, kdo úkol provede",
+    "notFoundTitle": "Úkol není k dispozici",
+    "notFoundDescription": "Tento úkol byl možná smazán nebo už s vámi není sdílen."
   },
   "toolbar": {
     "defaultProject": "Výchozí projekt",

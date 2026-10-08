@@ -111,7 +111,9 @@
     "unableChangeAssignee": "",
     "availableToCompleteStarting": "",
     "delegateToSomeoneElse": "",
-    "selectAPerformer": ""
+    "selectAPerformer": "",
+    "notFoundTitle": "Attività non disponibile",
+    "notFoundDescription": "Questa attività potrebbe essere stata eliminata o non è più condivisa con te."
   },
   "toolbar": {
     "defaultProject": "",

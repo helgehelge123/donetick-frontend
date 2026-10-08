@@ -111,7 +111,9 @@
     "unableChangeAssignee": "",
     "availableToCompleteStarting": "",
     "delegateToSomeoneElse": "",
-    "selectAPerformer": ""
+    "selectAPerformer": "",
+    "notFoundTitle": "任务不可用",
+    "notFoundDescription": "此任务可能已被删除，或不再与您共享。"
   },
   "toolbar": {
     "defaultProject": "",

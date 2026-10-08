@@ -111,7 +111,9 @@
     "unableChangeAssignee": "",
     "availableToCompleteStarting": "",
     "delegateToSomeoneElse": "",
-    "selectAPerformer": ""
+    "selectAPerformer": "",
+    "notFoundTitle": "Tarefa não disponível",
+    "notFoundDescription": "Esta tarefa pode ter sido excluída ou não está mais compartilhada com você."
   },
   "toolbar": {
     "defaultProject": "",

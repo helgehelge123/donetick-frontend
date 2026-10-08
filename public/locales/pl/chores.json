@@ -111,7 +111,9 @@
     "unableChangeAssignee": "",
     "availableToCompleteStarting": "",
     "delegateToSomeoneElse": "",
-    "selectAPerformer": ""
+    "selectAPerformer": "",
+    "notFoundTitle": "Zadanie niedostępne",
+    "notFoundDescription": "To zadanie mogło zostać usunięte lub nie jest już z Tobą udostępniane."
   },
   "toolbar": {
     "defaultProject": "",

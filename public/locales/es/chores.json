@@ -111,7 +111,9 @@
     "unableChangeAssignee": "",
     "availableToCompleteStarting": "",
     "delegateToSomeoneElse": "",
-    "selectAPerformer": "Seleccionar a performer"
+    "selectAPerformer": "Seleccionar a performer",
+    "notFoundTitle": "Tarea no disponible",
+    "notFoundDescription": "Es posible que esta tarea haya sido eliminada o ya no esté compartida contigo."
   },
   "toolbar": {
     "defaultProject": "Proyecto por defecto",

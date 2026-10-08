@@ -111,7 +111,9 @@
     "unableChangeAssignee": "",
     "availableToCompleteStarting": "",
     "delegateToSomeoneElse": "",
-    "selectAPerformer": ""
+    "selectAPerformer": "",
+    "notFoundTitle": "タスクが利用できません",
+    "notFoundDescription": "このタスクは削除された可能性があるか、共有が解除されています。"
   },
   "toolbar": {
     "defaultProject": "",

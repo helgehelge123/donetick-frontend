@@ -111,7 +111,9 @@
     "unableChangeAssignee": "Impossible de changer la personne assignée",
     "availableToCompleteStarting": "Disponible pour terminer le départ {{date}}",
     "delegateToSomeoneElse": "Déléguer à quelqu'un d'autre",
-    "selectAPerformer": "Sélectionnez un interprète"
+    "selectAPerformer": "Sélectionnez un interprète",
+    "notFoundTitle": "Tâche indisponible",
+    "notFoundDescription": "Cette tâche a peut-être été supprimée ou n'est plus partagée avec vous."
   },
   "toolbar": {
     "defaultProject": "Projet par défaut",

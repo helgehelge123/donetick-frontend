@@ -504,7 +504,9 @@
     "undoFailed": "Error al deshacer",
     "undoFailedMessage": "No se pudo deshacer la acción. Por favor, inténtalo de nuevo.",
     "undoSuccessful": "Deshecho con éxito",
-    "viewHistory": "Ver historial"
+    "viewHistory": "Ver historial",
+    "notFoundTitle": "Tarea no disponible",
+    "notFoundDescription": "Es posible que esta tarea haya sido eliminada o ya no esté compartida contigo."
   },
   "completeChore": "Completar tarea",
   "dataError": {
@@ -970,8 +972,8 @@
       "2": "2.º",
       "3": "3.º",
       "4": "4.º",
-      "last": "último",
-      "5": "5.º"
+      "5": "5.º",
+      "last": "último"
     },
     "picker": {
       "apply": "Aplicar",

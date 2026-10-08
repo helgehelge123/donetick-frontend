@@ -111,7 +111,9 @@
     "unableChangeAssignee": "Zuständige Person konnte nicht geändert werden",
     "availableToCompleteStarting": "Ab {{date}} erledigbar",
     "delegateToSomeoneElse": "An jemand anderen übertragen",
-    "selectAPerformer": "Wähle eine ausführende Person"
+    "selectAPerformer": "Wähle eine ausführende Person",
+    "notFoundTitle": "Aufgabe nicht verfügbar",
+    "notFoundDescription": "Diese Aufgabe wurde möglicherweise gelöscht oder wird nicht mehr mit dir geteilt."
   },
   "toolbar": {
     "defaultProject": "Standardprojekt",

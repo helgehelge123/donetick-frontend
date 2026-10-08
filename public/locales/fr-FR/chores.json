@@ -70,7 +70,9 @@
       "paused": "Minuteur en Pause",
       "reset": "Réinitialiser le Minuteur",
       "delete": "Supprimer la Session"
-    }
+    },
+    "notFoundTitle": "Tâche indisponible",
+    "notFoundDescription": "Cette tâche a peut-être été supprimée ou n'est plus partagée avec vous."
   },
   "subTask": {
     "untitled": "Sous-tache sans titre",

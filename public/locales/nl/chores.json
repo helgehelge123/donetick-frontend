@@ -111,7 +111,9 @@
     "unableChangeAssignee": "",
     "availableToCompleteStarting": "",
     "delegateToSomeoneElse": "",
-    "selectAPerformer": ""
+    "selectAPerformer": "",
+    "notFoundTitle": "Taak niet beschikbaar",
+    "notFoundDescription": "Deze taak is mogelijk verwijderd of wordt niet meer met jou gedeeld."
   },
   "toolbar": {
     "defaultProject": "",

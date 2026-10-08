@@ -111,7 +111,9 @@
     "unableChangeAssignee": "",
     "availableToCompleteStarting": "",
     "delegateToSomeoneElse": "",
-    "selectAPerformer": ""
+    "selectAPerformer": "",
+    "notFoundTitle": "המשימה אינה זמינה",
+    "notFoundDescription": "ייתכן שהמשימה נמחקה או שאינה משותפת איתך יותר."
   },
   "toolbar": {
     "defaultProject": "",

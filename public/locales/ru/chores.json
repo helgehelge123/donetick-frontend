@@ -111,7 +111,9 @@
     "unableChangeAssignee": "",
     "availableToCompleteStarting": "",
     "delegateToSomeoneElse": "",
-    "selectAPerformer": ""
+    "selectAPerformer": "",
+    "notFoundTitle": "Задача недоступна",
+    "notFoundDescription": "Возможно, эта задача была удалена или больше не доступна вам для просмотра."
   },
   "toolbar": {
     "defaultProject": "",

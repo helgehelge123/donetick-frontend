@@ -111,7 +111,9 @@
     "unableChangeAssignee": "تعذر تغيير المحال إليه",
     "availableToCompleteStarting": "متاح لإكمال بدء {{date}}",
     "delegateToSomeoneElse": "مندوب إلى شخص آخر",
-    "selectAPerformer": "حدد الأداء"
+    "selectAPerformer": "حدد الأداء",
+    "notFoundTitle": "المهمة غير متاحة",
+    "notFoundDescription": "ربما تم حذف هذه المهمة أو لم تعد مشاركة معك."
   },
   "toolbar": {
     "defaultProject": "المشروع الافتراضي",
