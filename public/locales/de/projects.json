@@ -67,6 +67,58 @@
     "descriptionLabel": "Beschreibung",
     "iconLabel": "Projektsymbol",
     "selectIcon": "Symbol auswählen",
-    "colorLabel": "Projektfarbe"
+    "colorLabel": "Projektfarbe",
+    "editTitle": "Projekt bearbeiten",
+    "createTitle": "Neues Projekt erstellen",
+    "update": "Speichern",
+    "create": "Erstellen"
+  },
+  "visibility": {
+    "label": "Wer sieht dieses Projekt?",
+    "ownerOnly": "Nur die Person, die das Projekt angelegt hat, kann ändern, wer es sieht.",
+    "changeHint": "Eine geänderte Sichtbarkeit wirkt sich auch auf die Aufgaben des Projekts aus. Vor dem Speichern siehst du genau, was sich ändert.",
+    "private": {
+      "title": "Nur ich",
+      "description": "Für alle anderen im Circle unsichtbar, auch für Admins. Die Aufgaben darin sind ebenfalls privat."
+    },
+    "members": {
+      "title": "Ausgewählte Mitglieder",
+      "description": "Nur du und die unten gewählten Personen sehen das Projekt und alle seine Aufgaben.",
+      "pickerTitle": "Freigeben für",
+      "noCandidates": "Im Circle ist noch niemand außer dir. Lade zuerst Personen in den Circle ein.",
+      "emptyHint": "Niemand ausgewählt: Vorerst siehst nur du das Projekt. Du kannst jederzeit Personen hinzufügen.",
+      "hint_one": "Für {{count}} Person freigegeben. Wenn du später jemanden entfernst, bleiben alle Aufgaben und der Verlauf erhalten.",
+      "hint_other": "Für {{count}} Personen freigegeben. Wenn du später jemanden entfernst, bleiben alle Aufgaben und der Verlauf erhalten."
+    },
+    "circle": {
+      "title": "Gesamter Circle",
+      "description": "Alle im Circle sehen das Projekt: {{names}}"
+    },
+    "chip": {
+      "private": "Nur ich",
+      "members_one": "{{count}} Mitglied",
+      "members_other": "{{count}} Mitglieder"
+    },
+    "review": {
+      "title": "Vor dem Speichern prüfen",
+      "back": "Zurück",
+      "confirm": "Änderung speichern",
+      "you": "du",
+      "audienceMembers": "Ausgewählte Mitglieder: {{names}}",
+      "audienceMembersNone": "Ausgewählte Mitglieder: noch niemand",
+      "loseAccess": "Verlieren den Zugriff",
+      "loseAccessHint_one": "Sie sehen das Projekt und seine {{count}} Aufgabe nicht mehr. Bereits synchronisierte Geräte entfernen sie beim nächsten Abgleich.",
+      "loseAccessHint_other": "Sie sehen das Projekt und seine {{count}} Aufgaben nicht mehr. Bereits synchronisierte Geräte entfernen sie beim nächsten Abgleich.",
+      "gainAccess": "Erhalten Zugriff",
+      "opensToCircle": "Alle im Circle – auch Personen, die später beitreten – sehen dann dieses Projekt und alle seine Aufgaben.",
+      "assignmentChanges_one": "Zuweisung ändert sich bei {{count}} Aufgabe",
+      "assignmentChanges_other": "Zuweisung ändert sich bei {{count}} Aufgaben",
+      "removedAssignees": "Nicht mehr zugewiesen: {{names}}.",
+      "addedAssignees": "Neu zugewiesen: {{names}}.",
+      "nowAssigned": "Jetzt zuständig: {{name}}.",
+      "nowUnassigned": "Jetzt niemandem zugewiesen.",
+      "keepsHistory": "Aufgaben, Erledigungsverlauf und Punkte bleiben unverändert erhalten. Gibst du das Projekt später wieder frei, sind Aufgaben und Verlauf wieder sichtbar; entfernte Zuweisungen musst du dann neu setzen.",
+      "previewFailed": "Die Auswirkung der Änderung konnte nicht geprüft werden. Bitte erneut versuchen."
+    }
   }
 }

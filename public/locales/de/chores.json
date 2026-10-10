@@ -763,7 +763,10 @@
     "updatedBy": "Aktualisiert von",
     "archive": "Archivieren",
     "unarchive": "Archivierung aufheben",
-    "create": "Erstellen"
+    "create": "Erstellen",
+    "projectAudienceHint": "Zuweisen kannst du nur Personen, die das Projekt „{{project}}“ sehen.",
+    "privacyInheritedPrivate": "Vom Projekt übernommen: Aufgaben darin siehst nur du.",
+    "privacyInheritedMembers": "Vom Projekt übernommen: Aufgaben darin sehen nur die Projektmitglieder."
   },
   "addTask": {
     "title": "Neue Aufgabe erstellen",

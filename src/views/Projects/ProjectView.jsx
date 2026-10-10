@@ -9,7 +9,6 @@ import {
 import {
   Add,
   Close,
-  Lock,
   MoreVert,
   Search,
   SearchOff,
@@ -50,6 +49,7 @@ import ScrollHideFab from '../components/ScrollHideFab'
 import ConfirmationModal from '../Modals/Inputs/ConfirmationModal'
 import ProjectModal from '../Modals/Inputs/ProjectModal'
 import { useProjects } from './ProjectQueries'
+import { ProjectVisibilityChip } from './ProjectVisibilityField'
 const ProjectCardContent = ({
   currentUserId,
   onCardClick,
@@ -165,23 +165,7 @@ const ProjectCardContent = ({
               {t('defaultChip')}
             </Chip>
           )}
-          {project.isPrivate && (
-            <Chip
-              size='sm'
-              variant='soft'
-              color='neutral'
-              sx={{
-                fontSize: 9,
-                height: 16,
-                px: 0.5,
-                ml: 1,
-                fontWeight: 'md',
-              }}
-              startDecorator={<Lock />}
-            >
-              Private
-            </Chip>
-          )}
+          <ProjectVisibilityChip project={project} />
         </Typography>
 
         {/* Project Info */}

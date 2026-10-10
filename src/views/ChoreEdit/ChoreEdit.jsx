@@ -8,6 +8,7 @@ import {
   HorizontalRule,
   Lock,
   LockOutlined,
+  People,
   Save,
   UploadFile,
 } from '@mui/icons-material'
@@ -72,6 +73,12 @@ import { imageSourceToFile } from '../../utils/FileConvert'
 import { isPlusAccount, resolvePhotoURL } from '../../utils/Helpers'
 import { getImageSrc, removeCachedImage } from '../../utils/ImageCache'
 import Priorities from '../../utils/Priorities.jsx'
+import {
+  filterMembersForProject,
+  getProjectAudienceIds,
+  getProjectVisibility,
+  PROJECT_VISIBILITY,
+} from '../../utils/ProjectAccess'
 import { getIconComponent } from '../../utils/ProjectIcons'
 import { getSafeBottomPadding } from '../../utils/SafeAreaUtils.js'
 import { generateUUID } from '../../utils/UUID'
@@ -516,16 +523,34 @@ const ChoreEdit = () => {
     setShowSaveAssigneeDefault(dirty)
   }, [anyone, assignableTo])
 
-  // A task in a private project is always private: the project's privacy wins over
-  // the task's own setting, so keep the form in sync with the selected project.
-  const selectedProjectIsPrivate = Boolean(
-    projects.find(project => project.id === projectId)?.isPrivate,
-  )
+  // A task in a private or shared project is always private: the project's
+  // privacy wins over the task's own setting, so keep the form in sync with the
+  // selected project.
+  const choreProject = projects.find(project => project.id === projectId)
+  const selectedProjectIsPrivate = Boolean(choreProject?.isPrivate)
+  const selectedProjectVisibility = getProjectVisibility(choreProject)
   useEffect(() => {
     if (selectedProjectIsPrivate && !isPrivate) {
       setIsPrivate(true)
     }
   }, [selectedProjectIsPrivate, isPrivate])
+
+  // Only people who can see the selected project can be assigned to its tasks
+  // (the server rejects anybody else). Drop assignees that fall outside when
+  // the project changes.
+  const assignablePerformers = filterMembersForProject(performers, choreProject)
+  const projectAudienceKey = (getProjectAudienceIds(choreProject) || []).join(
+    ',',
+  )
+  useEffect(() => {
+    const audience = getProjectAudienceIds(choreProject)
+    if (!audience) return
+    setAssignableTo(current => {
+      const kept = current.filter(a => audience.includes(a.userId))
+      return kept.length === current.length ? current : kept
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [projectAudienceKey])
 
   // Keyboard shortcuts
   useEffect(() => {
@@ -985,7 +1010,14 @@ const ChoreEdit = () => {
                       )}
                     </Avatar>
                     {project.name}
-                    {project.isPrivate && (
+                    {getProjectVisibility(project) ===
+                      PROJECT_VISIBILITY.MEMBERS && (
+                      <People
+                        sx={{ fontSize: 14, verticalAlign: 'text-bottom' }}
+                      />
+                    )}
+                    {getProjectVisibility(project) ===
+                      PROJECT_VISIBILITY.PRIVATE && (
                       <Lock
                         sx={{ fontSize: 14, verticalAlign: 'text-bottom' }}
                       />
@@ -1315,7 +1347,7 @@ const ChoreEdit = () => {
                 />
               </ListItem>
 
-              {performers?.map((item, index) => (
+              {assignablePerformers?.map((item, index) => (
                 <ListItem key={item.id}>
                   <Checkbox
                     checked={assignableTo.some(a => a.userId == item.userId)}
@@ -1347,6 +1379,13 @@ const ChoreEdit = () => {
               ))}
             </List>
           </Card>
+          {selectedProjectIsPrivate && (
+            <Typography level='body-xs' sx={{ color: 'text.tertiary', mt: 1 }}>
+              {t('choreEdit.projectAudienceHint', {
+                project: choreProject?.name,
+              })}
+            </Typography>
+          )}
           <FormControl error={Boolean(errors.assignee)}>
             <FormHelperText error>{Boolean(errors.assignee)}</FormHelperText>
           </FormControl>
@@ -1945,8 +1984,9 @@ const ChoreEdit = () => {
 
           {selectedProjectIsPrivate && (
             <Typography level='body-sm' color='neutral'>
-              Inherited from the project: tasks in a private project are always
-              private
+              {selectedProjectVisibility === PROJECT_VISIBILITY.MEMBERS
+                ? t('choreEdit.privacyInheritedMembers')
+                : t('choreEdit.privacyInheritedPrivate')}
             </Typography>
           )}
 

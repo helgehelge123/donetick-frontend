@@ -763,7 +763,10 @@
     "updatedBy": "Updated by",
     "archive": "Archive",
     "unarchive": "Unarchive",
-    "create": "Create"
+    "create": "Create",
+    "projectAudienceHint": "Only people who can see the project “{{project}}” can be assigned.",
+    "privacyInheritedPrivate": "Inherited from the project: only you can see tasks in it.",
+    "privacyInheritedMembers": "Inherited from the project: only its members can see tasks in it."
   },
   "addTask": {
     "title": "Create new task",

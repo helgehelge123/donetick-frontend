@@ -7,7 +7,6 @@ import {
   DriveFileMove,
   Edit,
   Flag,
-  Lock,
   ManageSearch,
   MoreTime,
   MoreVert,
@@ -53,6 +52,7 @@ import { isOfficialDonetickInstanceSync } from '../../utils/FeatureToggle'
 import Priorities from '../../utils/Priorities'
 import { getIconComponent } from '../../utils/ProjectIcons'
 import { useProjects } from '../Projects/ProjectQueries'
+import { ProjectAccessIcon } from '../Projects/ProjectVisibilityField'
 
 const NO_PRIORITY = { name: 'No priority', value: 0, color: 'neutral' }
 
@@ -610,11 +610,10 @@ const ChoreActionMenu = ({
             </ListItemDecorator>
             <ListItemContent>
               {project.name}
-              {project.isPrivate && (
-                <Lock
-                  sx={{ fontSize: 14, ml: 0.5, verticalAlign: 'text-bottom' }}
-                />
-              )}
+              <ProjectAccessIcon
+                project={project}
+                sx={{ fontSize: 14, ml: 0.5, verticalAlign: 'text-bottom' }}
+              />
             </ListItemContent>
           </ListItemButton>
         </ListItem>
@@ -755,15 +754,14 @@ const ChoreActionMenu = ({
                   <ListItemContent>
                     <Typography level='body-sm'>
                       {project.name}
-                      {project.isPrivate && (
-                        <Lock
-                          sx={{
-                            fontSize: 14,
-                            ml: 0.5,
-                            verticalAlign: 'text-bottom',
-                          }}
-                        />
-                      )}
+                      <ProjectAccessIcon
+                        project={project}
+                        sx={{
+                          fontSize: 14,
+                          ml: 0.5,
+                          verticalAlign: 'text-bottom',
+                        }}
+                      />
                     </Typography>
                   </ListItemContent>
                 </MenuItem>
